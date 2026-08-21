@@ -1,0 +1,626 @@
+{
+  "vocab": [
+    {
+      "id": "v1",
+      "en": "although",
+      "es": "aunque",
+      "example": "Although it was raining, we went out.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v2",
+      "en": "to achieve",
+      "es": "lograr / conseguir",
+      "example": "She achieved her goal after years of work.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v3",
+      "en": "reliable",
+      "es": "confiable",
+      "example": "He is a very reliable person.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v4",
+      "en": "to figure out",
+      "es": "descifrar / entender",
+      "example": "I finally figured out how it works.",
+      "box": 1,
+      "due": "2026-08-18",
+      "correct": 1,
+      "incorrect": 0
+    },
+    {
+      "id": "v5",
+      "en": "worth it",
+      "es": "vale la pena",
+      "example": "The trip was long, but it was worth it.",
+      "box": 1,
+      "due": "2026-08-18",
+      "correct": 1,
+      "incorrect": 0
+    },
+    {
+      "id": "v6",
+      "en": "to get used to",
+      "es": "acostumbrarse a",
+      "example": "You'll get used to the new schedule soon.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v7",
+      "en": "overwhelmed",
+      "es": "abrumado/a",
+      "example": "I felt overwhelmed by all the emails.",
+      "box": 1,
+      "due": "2026-08-18",
+      "correct": 1,
+      "incorrect": 0
+    },
+    {
+      "id": "v8",
+      "en": "in the meantime",
+      "es": "mientras tanto",
+      "example": "In the meantime, let's start with the basics.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v9",
+      "en": "nevertheless",
+      "es": "sin embargo / no obstante",
+      "example": "It was raining; nevertheless, we went for a walk.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v10",
+      "en": "outcome",
+      "es": "resultado",
+      "example": "We are waiting for the outcome of the election.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v11",
+      "en": "to assume",
+      "es": "suponer",
+      "example": "I assumed you had already left.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v12",
+      "en": "thorough",
+      "es": "minucioso/a, exhaustivo/a",
+      "example": "She did a thorough review of the document.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v13",
+      "en": "to convince",
+      "es": "convencer",
+      "example": "He convinced me to join the team.",
+      "box": 1,
+      "due": "2026-08-18",
+      "correct": 1,
+      "incorrect": 0
+    },
+    {
+      "id": "v14",
+      "en": "ambiguous",
+      "es": "ambiguo/a",
+      "example": "The instructions were ambiguous and confusing.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v15",
+      "en": "consistent",
+      "es": "consistente / constante",
+      "example": "You need to be consistent with your practice.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v16",
+      "en": "to accomplish",
+      "es": "lograr / cumplir",
+      "example": "We accomplished all our goals this year.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v17",
+      "en": "algorithm",
+      "es": "algoritmo",
+      "example": "The algorithm sorts the data in under a second.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v18",
+      "en": "dataset",
+      "es": "conjunto de datos",
+      "example": "We trained the model on a large dataset.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v19",
+      "en": "hypothesis",
+      "es": "hipótesis",
+      "example": "Our hypothesis is that the delay is caused by network latency.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v20",
+      "en": "variable",
+      "es": "variable",
+      "example": "Age is one of the variables in this study.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v21",
+      "en": "correlation",
+      "es": "correlación",
+      "example": "There's a strong correlation between the two metrics.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v22",
+      "en": "causation",
+      "es": "causalidad",
+      "example": "Correlation doesn't always imply causation.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v23",
+      "en": "statistically significant",
+      "es": "estadísticamente significativo",
+      "example": "The results were statistically significant.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v24",
+      "en": "infrastructure",
+      "es": "infraestructura",
+      "example": "We need to scale our infrastructure before launch.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v25",
+      "en": "scalable",
+      "es": "escalable",
+      "example": "The system needs to be scalable to handle more users.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v26",
+      "en": "latency",
+      "es": "latencia",
+      "example": "High latency made the app feel slow.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v27",
+      "en": "bandwidth",
+      "es": "ancho de banda",
+      "example": "The video call used a lot of bandwidth.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v28",
+      "en": "iteration",
+      "es": "iteración",
+      "example": "Each iteration of the design improved usability.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v29",
+      "en": "prototype",
+      "es": "prototipo",
+      "example": "We built a prototype to test the idea.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v30",
+      "en": "empirical",
+      "es": "empírico",
+      "example": "The claim is based on empirical evidence, not guesses.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v31",
+      "en": "methodology",
+      "es": "metodología",
+      "example": "The paper explains its research methodology in detail.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v32",
+      "en": "to quantify",
+      "es": "cuantificar",
+      "example": "It's hard to quantify the impact of the change.",
+      "box": 1,
+      "due": "2026-08-18",
+      "correct": 1,
+      "incorrect": 0
+    },
+    {
+      "id": "v33",
+      "en": "to optimize",
+      "es": "optimizar",
+      "example": "We optimized the query to run faster.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v34",
+      "en": "to simulate",
+      "es": "simular",
+      "example": "The software simulates real-world traffic conditions.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v35",
+      "en": "to calibrate",
+      "es": "calibrar",
+      "example": "The sensor needs to be calibrated before use.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v36",
+      "en": "equation",
+      "es": "ecuación",
+      "example": "Solve the equation for x.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v37",
+      "en": "threshold",
+      "es": "umbral",
+      "example": "An alert triggers once usage crosses the threshold.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    },
+    {
+      "id": "v38",
+      "en": "redundancy",
+      "es": "redundancia",
+      "example": "We added redundancy so the system stays up if one server fails.",
+      "box": 0,
+      "due": null,
+      "correct": 0,
+      "incorrect": 0
+    }
+  ],
+  "phrases": [
+    {
+      "id": "p1",
+      "type": "fill",
+      "prompt": "I have ___ finished the report yet.",
+      "answer": "not",
+      "hint": "Negación con 'have'"
+    },
+    {
+      "id": "p2",
+      "type": "translate",
+      "prompt": "Necesito acostumbrarme a este trabajo.",
+      "answer": "I need to get used to this job.",
+      "hint": "Usa 'get used to'"
+    },
+    {
+      "id": "p3",
+      "type": "fill",
+      "prompt": "She has been working here ___ five years.",
+      "answer": "for",
+      "hint": "for + duración"
+    },
+    {
+      "id": "p4",
+      "type": "translate",
+      "prompt": "Aunque estaba cansado, terminó el proyecto.",
+      "answer": "Although he was tired, he finished the project.",
+      "hint": "Empieza con 'Although'"
+    },
+    {
+      "id": "p5",
+      "type": "fill",
+      "prompt": "If I ___ more time, I would travel more.",
+      "answer": "had",
+      "hint": "Segundo condicional"
+    },
+    {
+      "id": "p6",
+      "type": "translate",
+      "prompt": "Valió la pena esperar.",
+      "answer": "It was worth it to wait.",
+      "hint": "Usa 'worth it'"
+    },
+    {
+      "id": "p7",
+      "type": "fill",
+      "prompt": "By the time we arrived, the movie ___ already started.",
+      "answer": "had",
+      "hint": "Pasado perfecto (had + participio)"
+    },
+    {
+      "id": "p8",
+      "type": "translate",
+      "prompt": "Si hubiera estudiado, habría aprobado el examen.",
+      "answer": "If I had studied, I would have passed the exam.",
+      "hint": "Tercer condicional"
+    },
+    {
+      "id": "p9",
+      "type": "fill",
+      "prompt": "While I ___ dinner, the phone rang.",
+      "answer": "was cooking",
+      "hint": "Pasado continuo"
+    },
+    {
+      "id": "p10",
+      "type": "translate",
+      "prompt": "El informe fue terminado por el equipo ayer.",
+      "answer": "The report was finished by the team yesterday.",
+      "hint": "Voz pasiva"
+    },
+    {
+      "id": "p11",
+      "type": "translate",
+      "prompt": "Ella dijo que terminaría el proyecto el viernes.",
+      "answer": "She said she would finish the project on Friday.",
+      "hint": "Estilo indirecto (reported speech)"
+    },
+    {
+      "id": "p12",
+      "type": "translate",
+      "prompt": "Llevo estudiando inglés por tres años.",
+      "answer": "I have been studying English for three years.",
+      "hint": "Presente perfecto continuo"
+    },
+    {
+      "id": "p13",
+      "type": "fill",
+      "prompt": "If it rains tomorrow, we ___ cancel the picnic.",
+      "answer": "will",
+      "hint": "Primer condicional"
+    },
+    {
+      "id": "p14",
+      "type": "translate",
+      "prompt": "Para cuando llegues, ya habré terminado.",
+      "answer": "By the time you arrive, I will have finished.",
+      "hint": "Futuro perfecto"
+    }
+  ],
+  "phrasalVerbs": [
+    {
+      "id": "pv1",
+      "verb": "bring up",
+      "meaning": "sacar un tema / mencionar",
+      "example": "She brought up an interesting point during the meeting."
+    },
+    {
+      "id": "pv2",
+      "verb": "carry out",
+      "meaning": "llevar a cabo / realizar",
+      "example": "They carried out the experiment successfully."
+    },
+    {
+      "id": "pv3",
+      "verb": "come across",
+      "meaning": "encontrarse con algo/alguien por casualidad",
+      "example": "I came across an old photo yesterday."
+    },
+    {
+      "id": "pv4",
+      "verb": "come up with",
+      "meaning": "idear / se le ocurrió",
+      "example": "He came up with a brilliant idea."
+    },
+    {
+      "id": "pv5",
+      "verb": "cut down on",
+      "meaning": "reducir",
+      "example": "You should cut down on sugar."
+    },
+    {
+      "id": "pv6",
+      "verb": "get along with",
+      "meaning": "llevarse bien con",
+      "example": "I get along with my coworkers."
+    },
+    {
+      "id": "pv7",
+      "verb": "give up",
+      "meaning": "rendirse / dejar de hacer algo",
+      "example": "Don't give up on your dreams."
+    },
+    {
+      "id": "pv8",
+      "verb": "go over",
+      "meaning": "repasar / revisar",
+      "example": "Let's go over the report before the meeting."
+    },
+    {
+      "id": "pv9",
+      "verb": "hold on",
+      "meaning": "esperar un momento",
+      "example": "Hold on a second, please."
+    },
+    {
+      "id": "pv10",
+      "verb": "keep up with",
+      "meaning": "mantenerse al día con",
+      "example": "It's hard to keep up with the news."
+    },
+    {
+      "id": "pv11",
+      "verb": "look forward to",
+      "meaning": "esperar algo con ilusión",
+      "example": "I look forward to hearing from you."
+    },
+    {
+      "id": "pv12",
+      "verb": "look into",
+      "meaning": "investigar",
+      "example": "The police are looking into the matter."
+    },
+    {
+      "id": "pv13",
+      "verb": "point out",
+      "meaning": "señalar",
+      "example": "She pointed out a mistake in the report."
+    },
+    {
+      "id": "pv14",
+      "verb": "put off",
+      "meaning": "posponer",
+      "example": "We had to put off the meeting."
+    },
+    {
+      "id": "pv15",
+      "verb": "run into",
+      "meaning": "encontrarse con alguien por casualidad",
+      "example": "I ran into an old friend."
+    },
+    {
+      "id": "pv16",
+      "verb": "set up",
+      "meaning": "establecer / organizar",
+      "example": "They set up a new company."
+    },
+    {
+      "id": "pv17",
+      "verb": "take after",
+      "meaning": "parecerse a (un familiar)",
+      "example": "She takes after her mother."
+    },
+    {
+      "id": "pv18",
+      "verb": "turn down",
+      "meaning": "rechazar",
+      "example": "He turned down the job offer."
+    },
+    {
+      "id": "pv19",
+      "verb": "work out",
+      "meaning": "resultar bien / hacer ejercicio",
+      "example": "Things worked out in the end."
+    },
+    {
+      "id": "pv20",
+      "verb": "wear off",
+      "meaning": "desvanecerse / perder efecto",
+      "example": "The pain medication wore off quickly."
+    }
+  ],
+  "writings": [],
+  "dailyChallenge": {
+    "date": null,
+    "verbId": null,
+    "answered": false,
+    "correct": false
+  },
+  "stats": {
+    "streak": 1,
+    "lastStudyDate": "2026-08-16",
+    "totalReviews": 5,
+    "totalCorrect": 5,
+    "writingsReviewed": 0,
+    "dailyChallengesCompleted": 0,
+    "todayCount": 5
+  },
+  "pathProgress": {},
+  "mistakes": [],
+  "categoryStats": {},
+  "savedExpressions": []
+}

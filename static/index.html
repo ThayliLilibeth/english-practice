@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mi Práctica de Inglés</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🇬🇧 Mi Práctica de Inglés</h1>
+    <div class="topbar-right">
+      <div class="stats-pill" id="statsPill">Cargando...</div>
+      <button class="topbar-stats-btn" id="topbarStatsBtn">📊 Estadísticas</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="home"><span class="tab-icon">🏠</span>Hoy</button>
+    <button class="tab-btn" data-tab="flashcards"><span class="tab-icon">🎴</span>Flashcards</button>
+    <button class="tab-btn" data-tab="path"><span class="tab-icon">🛤️</span>Ruta B2→C1-C2</button>
+    <button class="tab-btn" data-tab="phrases"><span class="tab-icon">📝</span>Frases y Gramática</button>
+    <button class="tab-btn" data-tab="challenge"><span class="tab-icon">🎯</span>Reto diario</button>
+    <button class="tab-btn" data-tab="writing"><span class="tab-icon">✍️</span>Escritura</button>
+    <button class="tab-btn" data-tab="reading"><span class="tab-icon">📖</span>Reading</button>
+    <span class="tabs-divider"></span>
+    <button class="tab-btn tab-btn-secondary" data-tab="material"><span class="tab-icon">📘</span>Material de apoyo</button>
+    <button class="tab-btn tab-btn-secondary" data-tab="content"><span class="tab-icon">🗂️</span>Contenido</button>
+  </nav>
+
+  <main>
+    <!-- HOME / DASHBOARD -->
+    <section id="tab-home" class="tab-panel active">
+      <div id="homeArea" class="stats-area"></div>
+    </section>
+
+    <!-- FLASHCARDS -->
+    <section id="tab-flashcards" class="tab-panel">
+      <div id="flashcardArea" class="flashcard-area"></div>
+    </section>
+
+    <!-- LEARNING PATH -->
+    <section id="tab-path" class="tab-panel path-view">
+      <div class="path-app">
+        <nav class="path-sidebar" id="pathSidebar">
+          <div class="path-brand">english-path<span> / b2-to-c1-c2.config</span></div>
+          <div class="path-overall">
+            <div class="path-overall-label"><span>progreso total</span><span id="pathOverallPct">0%</span></div>
+            <div class="path-overall-bar"><div class="path-overall-fill" id="pathOverallFill"></div></div>
+          </div>
+          <div id="pathMonthContainer"></div>
+        </nav>
+        <div class="path-main">
+          <div class="path-tabbar" id="pathTabbar"></div>
+          <div class="path-content" id="pathContent"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHRASES / GRAMMAR -->
+    <section id="tab-phrases" class="tab-panel">
+      <nav class="subtabs">
+        <button class="subtab-btn active" data-subtab="practice"><span class="tab-icon">🧩</span>Práctica</button>
+        <button class="subtab-btn" data-subtab="quiz"><span class="tab-icon">✅</span>Quiz</button>
+        <button class="subtab-btn" data-subtab="preps"><span class="tab-icon">📍</span>Preposiciones</button>
+        <button class="subtab-btn" data-subtab="adjectives"><span class="tab-icon">🎨</span>Orden de adjetivos</button>
+        <button class="subtab-btn" data-subtab="connectors"><span class="tab-icon">🔗</span>Conectores</button>
+      </nav>
+
+      <div id="phrases-practice" class="subtab-panel active">
+        <div id="phraseArea" class="phrase-area"></div>
+      </div>
+
+      <div id="phrases-quiz" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Preguntas de opción múltiple de gramática y vocabulario. Respóndelas y presiona "ejecutar tests" para revisar todas a la vez.</p>
+        <div id="grammarQuizArea"></div>
+        <div class="row-buttons" style="margin-top:12px">
+          <button class="primary" id="runQuizBtn">▶ ejecutar tests</button>
+          <button class="secondary" id="newQuizSetBtn">🔀 Nuevo set de preguntas</button>
+        </div>
+        <div class="quiz-terminal" id="quizTerminal">$ esperando ejecución de quiz...</div>
+      </div>
+
+      <div id="phrases-preps" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Ejercicios de IN, ON, AT. Repasa las reglas en "Material de apoyo → Preposiciones".</p>
+        <div id="prepsQuizArea"></div>
+        <div class="row-buttons" style="margin-top:12px">
+          <button class="primary" id="prepsQuizBtn">▶ ejecutar tests</button>
+        </div>
+        <div class="quiz-terminal" id="prepsTerminal">$ esperando ejecución de quiz...</div>
+      </div>
+
+      <div id="phrases-adjectives" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Ejercicios de orden de adjetivos. Repasa la tabla en "Material de apoyo → Orden de adjetivos".</p>
+        <div id="adjectivesQuizArea"></div>
+        <div class="row-buttons" style="margin-top:12px">
+          <button class="primary" id="adjectivesQuizBtn">▶ ejecutar tests</button>
+        </div>
+        <div class="quiz-terminal" id="adjectivesTerminal">$ esperando ejecución de quiz...</div>
+      </div>
+
+      <div id="phrases-connectors" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Ejercicios de conectores. Repasa la lista en "Material de apoyo → Conectores".</p>
+        <div id="connectorsQuizArea"></div>
+        <div class="row-buttons" style="margin-top:12px">
+          <button class="primary" id="connectorsQuizBtn">▶ ejecutar tests</button>
+        </div>
+        <div class="quiz-terminal" id="connectorsTerminal">$ esperando ejecución de quiz...</div>
+      </div>
+    </section>
+
+    <!-- DAILY CHALLENGE -->
+    <section id="tab-challenge" class="tab-panel">
+      <div id="challengeArea" class="phrase-area"></div>
+    </section>
+
+    <!-- WRITING -->
+    <section id="tab-writing" class="tab-panel">
+      <div class="writing-area">
+        <h2>✍️ Escribe algo en inglés</h2>
+        <p class="hint">Un párrafo corto, un correo, lo que quieras practicar. Se revisará con un corrector gramatical y te mostrará sugerencias.</p>
+        <textarea id="writingInput" rows="8" placeholder="Write a few sentences in English..."></textarea>
+        <div class="row-buttons">
+          <button class="primary" id="checkWritingBtn">Revisar mi escrito</button>
+          <span id="writingStatus" class="hint"></span>
+        </div>
+        <div id="writingResults"></div>
+        <h2>🕘 Historial</h2>
+        <div id="writingHistory" class="list"></div>
+      </div>
+    </section>
+
+    <!-- READING -->
+    <section id="tab-reading" class="tab-panel">
+      <p class="hint" style="margin-bottom:16px">Lee el texto y responde las preguntas: algunas son de opción múltiple (se califican solas) y otras de respuesta abierta (comparas tu respuesta con una respuesta modelo).</p>
+      <div class="reading-picker" id="readingPicker"></div>
+      <div id="readingArea"></div>
+    </section>
+
+    <!-- MATERIAL DE APOYO (guía de tiempos + verbos) -->
+    <section id="tab-material" class="tab-panel">
+      <nav class="subtabs">
+        <button class="subtab-btn active" data-subtab="guide"><span class="tab-icon">📖</span>Guía de tiempos</button>
+        <button class="subtab-btn" data-subtab="verbs"><span class="tab-icon">📋</span>Verbos</button>
+        <button class="subtab-btn" data-subtab="preps"><span class="tab-icon">📍</span>Preposiciones</button>
+        <button class="subtab-btn" data-subtab="adjectives"><span class="tab-icon">🎨</span>Orden de adjetivos</button>
+        <button class="subtab-btn" data-subtab="connectors"><span class="tab-icon">🔗</span>Conectores</button>
+      </nav>
+
+      <div id="material-guide" class="subtab-panel active">
+        <p class="hint" style="margin-bottom:16px">Guía rápida de los tiempos verbales en inglés: cómo se forman y cuándo usarlos.</p>
+        <div id="guideArea" class="guide-area"></div>
+      </div>
+
+      <div id="material-verbs" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Tabla de verbos en inglés con sus conjugaciones (base, pasado simple, participio) y traducción.</p>
+        <div class="verbs-toolbar">
+          <input type="text" id="verbSearch" placeholder="Buscar verbo (inglés o español)..." />
+          <div class="verbs-filter">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="regular">Regulares</button>
+            <button class="filter-btn" data-filter="irregular">Irregulares</button>
+          </div>
+        </div>
+        <div class="verbs-table-wrap">
+          <table class="verbs-table">
+            <thead>
+              <tr>
+                <th>Base</th>
+                <th>Pasado simple</th>
+                <th>Participio</th>
+                <th>Español</th>
+                <th>Tipo</th>
+              </tr>
+            </thead>
+            <tbody id="verbsTableBody"></tbody>
+          </table>
+          <div id="verbsEmpty" class="empty-state" style="display:none">No se encontraron verbos.</div>
+        </div>
+      </div>
+
+      <div id="material-preps" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Reglas de uso de las preposiciones IN, ON y AT para tiempo y lugar. Practica en "Frases y Gramática → Preposiciones".</p>
+        <div id="prepsArea" class="preps-area"></div>
+      </div>
+
+      <div id="material-adjectives" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Orden correcto de los adjetivos en inglés al describir algo o a alguien. Practica en "Frases y Gramática → Orden de adjetivos".</p>
+        <div id="adjectivesArea" class="adjectives-area"></div>
+      </div>
+
+      <div id="material-connectors" class="subtab-panel">
+        <p class="hint" style="margin-bottom:16px">Conectores en inglés agrupados por función: adición, contraste, causa, consecuencia, secuencia y ejemplos. Practica en "Frases y Gramática → Conectores".</p>
+        <div id="connectorsArea" class="guide-area"></div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO (mi contenido + añadir contenido) -->
+    <section id="tab-content" class="tab-panel">
+      <nav class="subtabs">
+        <button class="subtab-btn active" data-subtab="library"><span class="tab-icon">📚</span>Mi contenido</button>
+        <button class="subtab-btn" data-subtab="add"><span class="tab-icon">➕</span>Añadir contenido</button>
+      </nav>
+
+      <div id="content-library" class="subtab-panel active">
+        <h2>🔤 Vocabulario guardado</h2>
+        <div id="vocabList" class="list"></div>
+        <h2>🧩 Ejercicios guardados</h2>
+        <div id="phraseList" class="list"></div>
+        <h2>🔗 Phrasal verbs guardados</h2>
+        <div id="phrasalList" class="list"></div>
+      </div>
+
+      <div id="content-add" class="subtab-panel">
+        <div class="add-grid">
+          <form id="addVocabForm" class="card-form">
+            <h2>🆕 Nueva palabra / frase de vocabulario</h2>
+            <label>Inglés
+              <input type="text" id="vEn" required placeholder="e.g. to catch up" />
+            </label>
+            <label>Español
+              <input type="text" id="vEs" required placeholder="e.g. ponerse al día" />
+            </label>
+            <label>Ejemplo (opcional)
+              <input type="text" id="vExample" placeholder="I need to catch up on emails." />
+            </label>
+            <button type="submit">Añadir palabra</button>
+          </form>
+
+          <form id="addPhraseForm" class="card-form">
+            <h2>🧩 Nuevo ejercicio de gramática</h2>
+            <label>Tipo
+              <select id="pType">
+                <option value="fill">Completar espacio (fill-in-the-blank)</option>
+                <option value="translate">Traducir del español</option>
+              </select>
+            </label>
+            <label>Enunciado / Prompt
+              <input type="text" id="pPrompt" required placeholder="Usa ___ para el espacio si es fill-in-the-blank" />
+            </label>
+            <label>Respuesta correcta
+              <input type="text" id="pAnswer" required />
+            </label>
+            <label>Pista (opcional)
+              <input type="text" id="pHint" />
+            </label>
+            <button type="submit">Añadir ejercicio</button>
+          </form>
+
+          <form id="addPhrasalForm" class="card-form">
+            <h2>🔤 Nuevo phrasal verb</h2>
+            <label>Phrasal verb
+              <input type="text" id="pvVerb" required placeholder="e.g. look forward to" />
+            </label>
+            <label>Significado (español)
+              <input type="text" id="pvMeaning" required placeholder="e.g. esperar algo con ilusión" />
+            </label>
+            <label>Ejemplo
+              <input type="text" id="pvExample" placeholder="I look forward to hearing from you." />
+            </label>
+            <button type="submit">Añadir phrasal verb</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="tab-stats" class="tab-panel">
+      <div id="statsArea" class="stats-area"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="/path.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
